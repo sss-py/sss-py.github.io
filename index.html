@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de Seguridad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="bg-blue-950 shadow-md" x-data="{ open: false }">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#" class="md:text-lg  font-bold text-gray-100 font-serif">
+                <img src="img/logotransparente-1024x759.png" alt="Logo" class="h-10 inline">
+                Super Security <span class="text-blue-400">Services</span>
+            </a>
+            <nav class="hidden md:flex space-x-4 text-lg">
+                <a href="#" class="text-gray-100 hover:text-blue-600 transition duration-400 ease-in-out">Inicio</a>
+                <a href="#" class="text-gray-100 hover:text-blue-600 transition duration-400 ease-in-out">Servicios</a>
+                <a href="#" class="text-gray-100 hover:text-blue-600 transition duration-400 ease-in-out">Nosotros</a>
+                <a href="#" class="text-gray-100 hover:text-blue-600 transition duration-400 ease-in-out">Contacto</a>
+            </nav>
+            <button class="md:hidden text-gray-100 focus:outline-none" @click="open = !open">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden" x-show="open" x-transition>
+            <nav class="flex flex-col p-4 space-y-6 bg-gray-950 text-lg">
+                <a href="#" class="text-gray-100 hover:text-blue-500 transition duration-300 ease-in-out">Inicio</a>
+                <a href="#" class="text-gray-100 hover:text-blue-500 transition duration-300 ease-in-out">Servicios</a>
+                <a href="#" class="text-gray-100 hover:text-blue-500 transition duration-300 ease-in-out">Nosotros</a>
+                <a href="#" class="text-gray-100 hover:text-blue-500 transition duration-300 ease-in-out">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative bg-cover bg-center flex items-center text-white py-20 px-10 h-[550px]" style="background-image: url('img/resiliencia-cibernetica.jpg');">
+        <div class="absolute bg-black opacity-60 inset-0"></div>
+        <div class="relative z-10 md:w-1/2">
+            <p class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in" style="text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;">
+                Seguridad integral
+            </p>
+            <p class="text-2xl md:text-3xl mb-8 leading-none animate-slide-up" >
+                Ofrecemos soluciones de seguridad personalizadas para tu hogar y negocio
+            </p>
+            <div class="flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4">
+                <a href="#" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-5 rounded-full transition duration-300 ease-in-out animate-bounce-in">
+                    Contáctanos
+                </a>
+                <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-3 px-5 rounded-full transition duration-300 ease-in-out animate-bounce-in-delay">
+                   Ir a SSS Peru
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animations -->
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 1.5s ease-out;
+        }
+
+        .animate-slide-up {
+            animation: slide-up 1.5s ease-out;
+        }
+
+        .animate-bounce-in {
+            animation: bounce-in 1.5s ease-out;
+        }
+
+        .animate-bounce-in-delay {
+            animation: bounce-in 1.5s ease-out 0.5s;
+            animation-fill-mode: backwards;
+        }
+    </style>
+
+<!-- Sobre Nosotros Section -->
+<section class="relative py-20 bg-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-400 opacity-30"></div>
+    <div class="container mx-auto px-6 relative z-10">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 relative z-10 animate-slide-up">
+            Sobre Nosotros
+        </h2>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+            <!-- Texto -->
+            <div class="w-full md:w-2/3 px-4">
+                <div class="bg-white text-gray-800 rounded-lg p-8 shadow-lg transform transition-transform duration-500 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 opacity-20"></div>
+                    <div class="relative">
+                        <h3 class="text-3xl font-bold mb-4 animate-fade-in">Super Security Services (SSS)</h3>
+                        <p class="mb-4 animate-slide-up animate-delay-200">Somos una marca de Super Security Company SAC. En un mundo cada vez más conectado, es necesario unir la seguridad física y digital para ofrecer una protección completa. Brindamos servicios de seguridad integral, combinando la experiencia de nuestros agentes con tecnología avanzada para proteger nuestro mundo físico y digital.</p>
+                        <p class="mb-6 animate-slide-up animate-delay-400">Nuestro equipo cuenta con entre 20 y 40 años de experiencia en el sector, incorporando una filosofía de mejora continua, innovación y trayectoria. Estamos comprometidos a ofrecer la mejor versión de nuestros servicios y a estar a tu disposición para cualquier consulta. Gracias por tu interés y confianza.</p>
+
+                        <h4 class="text-2xl font-semibold mt-6 mb-4 animate-bounce-in">Misión</h4>
+                        <p class="mb-4 animate-slide-up animate-delay-600">Brindar un servicio de seguridad integral, eficaz y de calidad que satisfaga las expectativas de nuestros clientes, contribuyendo a su bienestar y desarrollo.</p>
+
+                        <h4 class="text-2xl font-semibold mt-6 mb-4 animate-bounce-in">Visión</h4>
+                        <p class="animate-slide-up animate-delay-800">Ser reconocidos como una empresa de seguridad de excelencia, innovadora y confiable, destacando por nuestro profesionalismo, responsabilidad y compromiso con la sociedad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Values Section -->
+<section class="py-20 bg-gray-100 text-gray-800">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 animate-fade-in">
+            Nuestros Valores
+        </h2>
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Value 1: Ethics -->
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-between animate-slide-up">
+                    <div class="bg-blue-800 p-4 rounded-full mx-auto mb-4 inline-block">
+                        <i class="fas fa-handshake text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ética</h3>
+                    <p>Actuamos con honestidad, transparencia y respeto en todas nuestras acciones.</p>
+                </div>
+            </div>
+            <!-- Value 2: Quality -->
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-between animate-slide-up animate-delay-200">
+                    <div class="bg-blue-800 p-4 rounded-full mx-auto mb-4 inline-block">
+                        <i class="fas fa-check text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Calidad</h3>
+                    <p>Buscamos la mejora continua y la excelencia en todos nuestros procesos y servicios.</p>
+                </div>
+            </div>
+            <!-- Value 3: Innovation -->
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-between animate-slide-up animate-delay-400">
+                    <div class="bg-blue-800 p-4 rounded-full mx-auto mb-4 inline-block">
+                        <i class="fas fa-lightbulb text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Innovación</h3>
+                    <p>Nos adaptamos a los cambios y ofrecemos soluciones creativas y vanguardistas a nuestros clientes.</p>
+                </div>
+            </div>
+            <!-- Value 4: Security -->
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-between animate-slide-up animate-delay-600">
+                    <div class="bg-blue-800 p-4 rounded-full mx-auto mb-4 inline-block">
+                        <i class="fas fa-shield-alt text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Seguridad</h3>
+                    <p>Priorizamos la prevención y la protección de las personas, los bienes y el medio ambiente.</p>
+                </div>
+            </div>
+            <!-- Value 5: Trust -->
+            <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full flex flex-col justify-between animate-slide-up animate-delay-800">
+                    <div class="bg-blue-800 p-4 rounded-full mx-auto mb-4 inline-block">
+                        <i class="fas fa-users text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Confianza</h3>
+                    <p>Generamos relaciones de largo plazo con nuestros clientes, basadas en el cumplimiento, la comunicación y el apoyo mutuo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+  <!-- Services Section -->
+<section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">Nuestros Servicios</h2>
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/3 px-4 mb-8">
+                <div class="h-full bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition duration-300 ease-in-out">
+                    <img src="img/segfisica-768x512.jpg" alt="Servicio 1" class="h-52 w-full object-cover rounded-t-lg mb-4">
+                    <div class="flex flex-col mt-auto">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Seguridad física</h3>
+                        <p class="text-gray-600 mb-4">Contamos con un equipo de agentes certificados y capacitados para actuar con serenidad y eficacia ante cualquier emergencia. Además, nuestro staff se complementa con profesionales retirados de las Fuerzas Armadas, que aportan su experiencia y habilidad en la operación.</p>
+                        <a href="#" class="bg-gray-900 text-white font-bold py-2 px-4 rounded-full text-center hover:bg-blue-700 transition duration-300 ease-in-out">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8">
+                <div class="h-full bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition duration-300 ease-in-out">
+                    <img src="img/segdigital-768x512.jpg" alt="Servicio 2" class="h-52 w-full object-cover rounded-t-lg mb-4">
+                    <div class="flex flex-col mt-auto">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Seguridad digital</h3>
+                        <p class="text-gray-600 mb-4">Desplegamos soluciones de seguridad tecnológica avanzada, incluyendo Sistemas electrónicos de última generación para alarmas, controles de acceso, sistemas de geolocalización, etc., garantizando protección y tranquilidad en cada momento.</p>
+                        <a href="#" class="bg-gray-900 text-white font-bold py-2 px-4 rounded-full text-center hover:bg-blue-700 transition duration-300 ease-in-out">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8">
+                <div class="h-full bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition duration-300 ease-in-out">
+                    <img src="img/consultoria.jpg" alt="Servicio 3" class="h-52 w-full object-cover rounded-t-lg mb-4">
+                    <div class="flex flex-col mt-auto">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Consultoría en Seguridad</h3>
+                        <p class="text-gray-600 mb-4">Obtén asesoría experta en seguridad para proteger lo que más te importa. Nuestro equipo de consultores está preparado para analizar tus necesidades específicas y ofrecerte soluciones personalizadas que garanticen la máxima seguridad en todas tus operaciones.</p>
+                        <a href="#" class="bg-gray-900 text-white font-bold py-2 px-4 rounded-full text-center hover:bg-blue-700 transition duration-300 ease-in-out">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-100 text-gray-800">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 animate-fade-in">
+            Contáctanos
+        </h2>
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Contact Form -->
+            <div class="w-full md:w-2/3 px-4">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Envíanos un mensaje</h3>
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                            <div class="flex flex-col">
+                                <label for="name" class="text-sm font-medium mb-2">Nombre</label>
+                                <input type="text" id="name" name="name" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="email" class="text-sm font-medium mb-2">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                        </div>
+                        <div class="flex flex-col mb-4">
+                            <label for="subject" class="text-sm font-medium mb-2">Asunto</label>
+                            <input type="text" id="subject" name="subject" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="flex flex-col mb-4">
+                            <label for="message" class="text-sm font-medium mb-2">Mensaje</label>
+                            <textarea id="message" name="message" rows="2" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Contact Info -->
+            <div class="w-full md:w-1/3 px-4">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Información de Contacto</h3>
+                    <p class="mb-4"><i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>Av. República de Panamá 4093, of. 604, Surquillo, Lima, Perú</p>
+                    <p class="mb-4"><i class="fas fa-phone-alt text-blue-500 mr-2"></i>+51 967 360 746</p>
+                    <p class="mb-4"><i class="fas fa-envelope text-blue-500 mr-2"></i>contacto@supersecurity.com.py</p>
+                    <div class="mt-6">
+                        <h4 class="text-xl font-semibold mb-2">Síguenos en Redes Sociales</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out">
+                                <i class="fab fa-facebook-f text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-blue-600 transition duration-300 ease-in-out">
+                                <i class="fab fa-twitter text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-pink-500 hover:text-pink-700 transition duration-300 ease-in-out">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">
+                                <i class="fab fa-linkedin-in text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Map Section -->
+        <div class="mt-12">
+            <h3 class="text-2xl font-semibold mb-4 text-center">Ubícanos</h3>
+            <div class="w-full h-80">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1950.5494687501994!2d-77.018399!3d-12.105379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8731af515b1%3A0xac7c25add66fc5a7!2sof.%20604%2C%20Av.%20Rep%C3%BAblica%20de%20Panam%C3%A1%204093%2C%20Surquillo%2015048%2C%20Peru!5e0!3m2!1sen!2spy!4v1722278790898!5m2!1sen!2spy"
+                    class="w-full h-full border-0 rounded-lg shadow-lg"
+                    allowfullscreen=""
+                    loading="lazy"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:justify-between">
+            <!-- About Section -->
+            <div class="mb-8 md:mb-0 w-full md:w-1/4">
+                <a href="#" class="text-2xl font-bold text-white hover:text-blue-400 transition duration-300 ease-in-out flex items-center">
+                    <img src="img/logotransparente-1024x759.png" alt="Logo" class="h-12 mr-3">
+                    <span>Super Security <span class="text-blue-400">Services</span></span>
+                </a>
+                <p class="mt-4 text-gray-400">Brindamos soluciones integrales en seguridad, combinando experiencia y tecnología para proteger tu mundo físico y digital.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="mb-8 md:mb-0 md:ms-16 w-full md:w-1/4">
+                <h4 class="text-lg font-semibold mb-4">Enlaces Útiles</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-blue-400 transition duration-300 ease-in-out">Inicio</a></li>
+                    <li><a href="#services" class="hover:text-blue-400 transition duration-300 ease-in-out">Servicios</a></li>
+                    <li><a href="#about" class="hover:text-blue-400 transition duration-300 ease-in-out">Sobre Nosotros</a></li>
+                    <li><a href="#contact" class="hover:text-blue-400 transition duration-300 ease-in-out">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="mb-8 md:mb-0 w-full md:mr-16 md:w-1/4">
+                <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                <p class="flex items-center mb-3"><i class="fas fa-map-marker-alt text-blue-400 mr-2"></i>Av. República de Panamá 4093, of. 604, Surquillo, Lima, Perú</p>
+                <p class="flex items-center mb-3"><i class="fas fa-phone-alt text-blue-400 mr-2"></i>+51 967 360 746</p>
+                <p class="flex items-center mb-3"><i class="fas fa-envelope text-blue-400 mr-2"></i>contacto@supersecurity.com.py</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="w-full md:w-1/4">
+                <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-blue-600 hover:text-blue-400 transition duration-300 ease-in-out text-2xl"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300 ease-in-out text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-pink-500 hover:text-pink-400 transition duration-300 ease-in-out text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400">
+            <p>&copy; 2024 SuperSecurityServices (SSS) – una marca de Super Security Company SAC | Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- CSS for button hover effect -->
+<style>
+    .bg-blue-600:hover {
+        background-color: #023196; /* Adjust the hover color */
+    }
+</style>
+</body>
+</html>
