@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-900 font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="inset-0 bg-gradient-to-r from-gray-900 to-gray-900 shadow-md" x-data="{ open: false }">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="/" class="md:text-lg font-bold text-gray-100 font-roboto">
+                <img src="/img/logotransparente-1024x759.png" alt="Logo" class="h-10 inline">
+                SuperSecurity<span class="text-blue-400">Services</span>
+            </a>
+            <nav class="hidden md:flex space-x-4 text-lg">
+                <a href="/" class="text-gray-100 hover:text-blue-600 transition duration-400 ease-in-out">Inicio</a>
+                <a href="/servicios" class="text-gray-100 hover:text-blue-600 transition duration-400 ease-in-out">Servicios</a>
+                <a href="/nosotros" class="text-gray-100 hover:text-blue-600 transition duration-400 ease-in-out">Nosotros</a>
+                <a href="/contacto" class="text-gray-100 hover:text-blue-600 transition duration-400 ease-in-out">Contacto</a>
+            </nav>
+            <button class="md:hidden text-gray-100 focus:outline-none" @click="open = !open">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden" x-show="open" x-transition>
+            <nav class="flex flex-col p-4 space-y-6 bg-gray-900 text-lg">
+                <a href="/" class="text-gray-100 hover:text-blue-500 transition duration-300 ease-in-out">Inicio</a>
+                <a href="/servicios" class="text-gray-100 hover:text-blue-500 transition duration-300 ease-in-out">Servicios</a>
+                <a href="/nosotros" class="text-gray-100 hover:text-blue-500 transition duration-300 ease-in-out">Nosotros</a>
+                <a href="/contacto" class="text-gray-100 hover:text-blue-500 transition duration-300 ease-in-out">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12">Seguridad Digital</h2>
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2">
+                    <img loading="lazy" src="/img/segdigital-768x512.jpg" alt="Seguridad Digital" class="w-full h-full object-cover rounded-lg shadow-lg mb-6">
+                </div>
+                <div class="w-full md:w-1/2 px-6">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Tecnología de Vanguardia</h3>
+                    <p class="text-gray-600 mb-4">Desplegamos soluciones de seguridad tecnológica avanzada, incluyendo sistemas electrónicos de última generación para alarmas, controles de acceso y sistemas de geolocalización. Garantizamos protección y tranquilidad en cada momento.</p>
+                    <p class="text-gray-600 mb-4">Nuestros servicios incluyen la implementación de software de seguridad, monitoreo en tiempo real y consultoría en ciberseguridad para proteger sus datos más sensibles.</p>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Beneficios</h4>
+                    <ul class="list-disc pl-5 text-gray-600 mb-6">
+                        <li>Sistemas de alarma de alta tecnología</li>
+                        <li>Controles de acceso avanzados</li>
+                        <li>Sistemas de geolocalización precisos</li>
+                        <li>Monitoreo en tiempo real</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send?phone=51967360746&text=Buenas%20me%20interesa%20el%20siguiente%20servicio:%20Seguridad%20Digital"  class="bg-gray-900 flex w-full justify-center  text-white font-bold py-2 px-6 rounded-full text-center hover:bg-blue-700 transition duration-300 ease-in-out">Contactar al Whatsapp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:justify-between">
+            <!-- About Section -->
+            <div class="mb-8 md:mb-0 w-full md:w-1/4">
+                <a href="#" class="text-2xl font-bold text-white hover:text-blue-400 transition duration-300 ease-in-out flex items-center">
+                    <img loading="lazy" src="/img/logotransparente-1024x759.png" alt="Logo" class="h-12 mr-3">
+                    <span>Super Security <span class="text-blue-400">Services</span></span>
+                </a>
+                <p class="mt-4 text-gray-400">Brindamos soluciones integrales en seguridad, combinando experiencia y tecnología para proteger tu mundo físico y digital.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="mb-8 md:mb-0 md:ms-16 w-full md:w-1/4">
+                <h4 class="text-lg font-semibold mb-4">Enlaces Útiles</h4>
+                <ul class="space-y-2">
+                    <li><a href="/" class="hover:text-blue-400 transition duration-300 ease-in-out">Inicio</a></li>
+                    <li><a href="/servicios" class="hover:text-blue-400 transition duration-300 ease-in-out">Servicios</a></li>
+                    <li><a href="/nosotros" class="hover:text-blue-400 transition duration-300 ease-in-out">Sobre Nosotros</a></li>
+                    <li><a href="/contacto" class="hover:text-blue-400 transition duration-300 ease-in-out">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="mb-8 md:mb-0 w-full md:mr-16 md:w-1/4">
+                <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                <p class="flex items-center mb-3"><i class="fas fa-map-marker-alt text-blue-400 mr-2"></i>Av. República de Panamá 4093, of. 604, Surquillo, Lima, Perú</p>
+                <p class="flex items-center mb-3"><i class="fas fa-phone-alt text-blue-400 mr-2"></i>+51 967 360 746</p>
+                <p class="flex items-center mb-3"><i class="fas fa-envelope text-blue-400 mr-2"></i>contacto@supersecurity.com</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="w-full md:w-1/4">
+                <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-blue-600 hover:text-blue-400 transition duration-300 ease-in-out text-2xl"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300 ease-in-out text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-pink-500 hover:text-pink-400 transition duration-300 ease-in-out text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-blue-700 hover:text-blue-500 transition duration-300 ease-in-out text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400">
+            <p>&copy; 2024 SuperSecurityServices (SSS) – una marca de Super Security Company SAC | Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+    <!-- Animations -->
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 1.5s ease-out;
+        }
+    </style>
+</body>
+
+</html>
