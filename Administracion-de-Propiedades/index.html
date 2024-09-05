@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
+    <title>Administracion de Propiedades</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -39,150 +39,30 @@
             </nav>
         </div>
     </header>
-
- <!-- Animations -->
- <style>
-    @keyframes fade-in {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes slide-up {
-        from {
-            transform: translateY(20px);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes bounce-in {
-        0% {
-            transform: scale(0.9);
-            opacity: 0;
-        }
-        60% {
-            transform: scale(1.05);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-
-    .animate-fade-in {
-        animation: fade-in 1.5s ease-out;
-    }
-
-    .animate-slide-up {
-        animation: slide-up 1.5s ease-out;
-    }
-
-    .animate-bounce-in {
-        animation: bounce-in 1.5s ease-out;
-    }
-
-    .animate-bounce-in-delay {
-        animation: bounce-in 1.5s ease-out 0.5s;
-        animation-fill-mode: backwards;
-    }
-    @keyframes custom-slide-up {
-from {
-    transform: translateY(50px);
-    opacity: 0;
-}
-to {
-    transform: translateY(0);
-    opacity: 1;
-}
-}
-.custom-slide-up {
-animation: custom-slide-up 1s ease-out;
-}
-</style>
-
-<section class="bg-gray-100 py-20">
-    <div class="container mx-auto px-6">
-        <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12">Nuestros Servicios</h2>
-
-        <!-- Servicio 1 -->
-        <div class="flex flex-wrap items-center mb-20">
-            <div class="w-full md:w-1/2">
-                <img loading="lazy" src="/img/segfisica-768x512.jpg" alt="Seguridad Física" class="w-full h-full object-cover rounded-lg shadow-lg">
-            </div>
-            <div class="w-full md:w-1/2 px-6 mt-6 md:mt-0">
-                <h3 class="text-3xl font-bold text-gray-800 mb-4">Seguridad Física</h3>
-                <p class="text-gray-600 mb-6">Nuestro equipo de agentes certificados y capacitados está preparado para actuar con serenidad y eficacia ante cualquier emergencia. Contamos con profesionales retirados de las Fuerzas Armadas que aportan su experiencia y habilidad en la operación.</p>
-                <ul class="list-disc pl-5 text-gray-600 mb-6">
-                    <li>Agentes certificados y capacitados</li>
-                    <li>Respuesta rápida y eficiente</li>
-                    <li>Profesionales con experiencia militar</li>
-                </ul>
-                <a href="/seguridad-fisica/" class="bg-gray-900 flex w-32 px-8 text-white font-bold py-2 px-4 rounded-full text-center hover:bg-blue-700 transition duration-300 ease-in-out">Ver más</a>
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12">Administración de Propiedades</h1>
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2">
+                    <img loading="lazy" src="/img/Administracion-de-Propiedades.jpg" alt="Administración de Propiedades" class="w-full h-full object-cover rounded-lg shadow-lg mb-6">
+                </div>
+                <div class="w-full md:w-1/2 px-6">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Gestión Integral y Protección</h3>
+                    <p class="text-gray-600 mb-4">En Super Security Services (SSS), nos especializamos en ofrecer un servicio completo de administración de propiedades que garantiza no solo el mantenimiento físico de los inmuebles, sino también su seguridad. Desde la gestión operativa hasta la implementación de sistemas avanzados de vigilancia, nos encargamos de todo para asegurar el óptimo estado y protección de tu propiedad.</p>
+                    <p class="text-gray-600 mb-4">Nuestros expertos en administración de inmuebles trabajan con tecnología de punta, como monitoreo 24/7, sistemas de control de acceso y alarmas automatizadas, para que tengas la tranquilidad de que tu inversión está en buenas manos.</p>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Beneficios</h4>
+                    <ul class="list-disc pl-5 text-gray-600 mb-6">
+                        <li>Mantenimiento integral de propiedades</li>
+                        <li>Monitoreo y seguridad 24/7</li>
+                        <li>Sistemas avanzados de control de acceso</li>
+                        <li>Gestión eficiente de recursos y espacios</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send?phone=51967360746&text=Buenas%20me%20interesa%20el%20siguiente%20servicio:%20Administración%20de%20Propiedades" class="bg-gray-900 flex w-full justify-center text-white font-bold py-2 px-6 rounded-full text-center hover:bg-blue-700 transition duration-300 ease-in-out" target="_blank">Contactar al Whatsapp</a>
+                </div>
             </div>
         </div>
-
-        <!-- Servicio 2 -->
-        <div class="flex flex-wrap items-center mb-20">
-            <div class="w-full md:w-1/2 order-2 md:order-1 md:px-6 mt-6 md:mt-0">
-                <h3 class="text-3xl font-bold text-gray-800 mb-4">Seguridad Digital</h3>
-                <p class="text-gray-600 mb-6">Desplegamos soluciones de seguridad tecnológica avanzada, incluyendo sistemas electrónicos de última generación para alarmas, controles de acceso y sistemas de geolocalización. Garantizamos protección y tranquilidad en cada momento.</p>
-                <ul class="list-disc pl-5 text-gray-600 mb-6">
-                    <li>Sistemas de alarma de alta tecnología</li>
-                    <li>Controles de acceso avanzados</li>
-                    <li>Sistemas de geolocalización precisos</li>
-                </ul>
-                <a href="/seguridad-digital/" class="bg-gray-900 flex w-32 px-8 text-white font-bold py-2 px-4 rounded-full text-center hover:bg-blue-700 transition duration-300 ease-in-out">Ver más</a>
-            </div>
-            <div class="w-full md:w-1/2 order-1 md:order-2">
-                <img loading="lazy" src="/img/segdigital-768x512.jpg" alt="Seguridad Digital" class="w-full h-full object-cover rounded-lg shadow-lg">
-            </div>
-        </div>
-
-        <!-- Servicio 3 -->
-        <div class="flex flex-wrap items-center mb-20">
-            <div class="w-full md:w-1/2">
-                <img loading="lazy" src="/img/consultoria.jpg" alt="Consultoría en Seguridad" class="w-full h-full object-cover rounded-lg shadow-lg">
-            </div>
-            <div class="w-full md:w-1/2 px-6 mt-6 md:mt-0">
-                <h3 class="text-3xl font-bold text-gray-800 mb-4">Consultoría en Seguridad</h3>
-                <p class="text-gray-600 mb-6">Ofrecemos asesoría experta en seguridad para proteger lo que más te importa. Nuestro equipo de consultores está preparado para analizar tus necesidades específicas y ofrecerte soluciones personalizadas que garanticen la máxima seguridad en todas tus operaciones.</p>
-                <ul class="list-disc pl-5 text-gray-600 mb-6">
-                    <li>Asesoría personalizada</li>
-                    <li>Análisis de necesidades específicas</li>
-                    <li>Soluciones de seguridad integrales</li>
-                </ul>
-                <a href="/consultoria/" class="bg-gray-900 flex w-32 px-8 text-white font-bold py-2 px-4 rounded-full text-center hover:bg-blue-700 transition duration-300 ease-in-out">Ver más</a>
-            </div>
-        </div>
-
-        <div class="flex flex-wrap items-center mb-20">
-            <div class="w-full md:w-1/2 order-2 md:order-1 md:px-6 mt-6 md:mt-0">
-                <h3 class="text-3xl font-bold text-gray-800 mb-4">Administración de Propiedades</h3>
-                <p class="text-gray-600 mb-6">En Super Security Services (SSS), ofrecemos un servicio completo de administración de propiedades, asegurando que tus bienes estén en las mejores manos. Nos encargamos de la gestión integral de inmuebles, incluyendo mantenimiento, seguridad y supervisión constante, para garantizar la preservación y seguridad de tu propiedad.</p>
-                <ul class="list-disc pl-5 text-gray-600 mb-6">
-                    <li>Mantenimiento integral de inmuebles</li>
-                    <li>Supervisión constante y gestión eficiente</li>
-                    <li>Sistemas de seguridad avanzados</li>
-                </ul>
-                <a href="/administracion-de-propiedades/" class="bg-gray-900 flex w-32 px-8 text-white font-bold py-2 px-4 rounded-full text-center hover:bg-blue-700 transition duration-300 ease-in-out">Ver más</a>
-            </div>
-            <div class="w-full md:w-1/2 order-1 md:order-2">
-                <img loading="lazy" src="/img/Administracion-de-Propiedades.jpg" alt="Administración de Propiedades" class="w-full h-full object-cover rounded-lg shadow-lg">
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-  
+    </section>    
+    
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white py-12">
@@ -252,4 +132,5 @@ animation: custom-slide-up 1s ease-out;
         }
     </style>
 </body>
+
 </html>
